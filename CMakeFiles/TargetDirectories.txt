@@ -1,0 +1,4 @@
+/work/CMakeFiles/rebuild_cache.dir
+/work/CMakeFiles/edit_cache.dir
+/work/CMakeFiles/r-type_server.dir
+/work/CMakeFiles/r-type_client.dir
