@@ -13,4 +13,4 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
       - name: build
-        run: mkdir -p build && cd build && cmake .. 
+        run: cmake . 
