@@ -1,0 +1,16 @@
+name: Linux - CMake Build Matrix
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get and Setup CMake
+        uses: jwlawson/actions-setup-cmake@v1.13
+        with:
+          cmake-version: "3.17.x"
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: build
+        run: cmake . 
