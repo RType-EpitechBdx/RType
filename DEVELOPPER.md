@@ -22,6 +22,8 @@ Stage2-Validation : You cannot merge on this branch without passing tests on Sta
 
 Master : Is the stable branch of the project, that the branch that players duplicate for play to the game. The merge on master will be made when our team will assess that there is enough novelty to release a new release for everyone.
 
+![plot](./readmefiles/SchemaBranches.png)
+
 If you have any question about the contribution don't hesitate to contact a member of the team !
 
 ## Mods/Extension
