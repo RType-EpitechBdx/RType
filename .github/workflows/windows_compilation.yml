@@ -1,7 +1,11 @@
 name: Windows - CMake Build Matrix
-
-on: [push, pull_request]
-
+on: 
+  push:
+      branches:
+        - Stage1-Testing
+  pull-request:
+      branches:
+        - Stage1-Testing
 env:
   CMAKE_VERSION: 3.24.3
   NINJA_VERSION: 1.11.1
