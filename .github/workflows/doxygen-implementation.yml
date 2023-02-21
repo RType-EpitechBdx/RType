@@ -1,18 +1,16 @@
 name: Doxygen implementation
 
+on:
   push:
-      branches:
-        - Stage1-Testing
-  pull-request:
-      branches:
-        - Stage1-Testing
+    branches: [Stage1-Testing]
+  pull_request:
+    branches: [Stage1-Testing]
 
 jobs:
-  runs-on: ubuntu-latest
-  steps:
-    - uses: mattnotmitt/doxygen-action@v1.9.5
-      with:
-        working-directory: 'ECS/'
-        working-directory: 'Game/'
-        working-directory: 'Server/'
-        doxyfile-path: './Doxyfile'
+  doxygen:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: mattnotmitt/doxygen-action@v1.9.5
+        with:
+          working-directory: '.'
+          doxyfile-path: './Doxyfile'
