@@ -1,11 +1,9 @@
 name: Linux - CMake Build Matrix
 on: 
   push:
-      branches:
-        - Stage1-Testing
-  pull-request:
-      branches:
-        - Stage1-Testing
+      branches: [Stage1-Testing]
+  pull_request:
+      branches: [Stage1-Testing]
 jobs:
   build:
     runs-on: ubuntu-latest
