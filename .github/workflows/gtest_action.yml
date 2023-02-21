@@ -1,21 +1,17 @@
 name: Gtest - Coverage tests
-
+on:
   push:
-      branches:
-        - Stage1-Testing
-  pull-request:
-      branches:
-        - Stage1-Testing
+      branches: [Stage1-Testing]
+  pull_request:
+      branches: [Stage1-Testing]
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
     - name: Get and Setup CMake
-        uses: jwlawson/actions-setup-cmake@v1.13
-        with:
-          cmake-version: "3.17.x"
-    - name: Checkout repository
-        uses: actions/checkout@v2
+      uses: jwlawson/actions-setup-cmake@v1.13
+      with:
+        cmake-version: "3.17.x"
     - name: Install gtest manually
       run: sudo apt-get install libgtest-dev && cd /usr/src/gtest && sudo cmake CMakeLists.txt && sudo make && sudo cp lib/*.a /usr/lib && sudo ln -s /usr/lib/libgtest.a /usr/local/lib/libgtest.a && sudo ln -s /usr/lib/libgtest_main.a /usr/local/lib/libgtest_main.a
     - uses: actions/checkout@v1
